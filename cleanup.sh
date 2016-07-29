@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-rm -ri jobs
-rm -rf crabTasks
+rm -r jobs
+rm -r crabTasks

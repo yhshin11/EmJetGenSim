@@ -672,3 +672,444 @@ Unable to find a Configuration object instance in file:
 Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
 See the ./crab.log file for more details.
 The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2016-07-20 20:53:52,940: 	 Executing command: 'submit'
+DEBUG 2016-07-20 20:53:52,941: 	 Found CRAB cache file /afs/cern.ch/user/y/yoshin/.crab3
+DEBUG 2016-07-20 20:53:52,996: 	 Checking credentials
+DEBUG 2016-07-20 20:53:53,006: 	 Found proxy file /tmp/x509up_u42351
+DEBUG 2016-07-20 20:53:53,006: 	 Getting proxy life time left
+DEBUG 2016-07-20 20:53:53,810: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-20 20:53:53,810: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-07-20 20:53:53,811: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+ERROR 2016-07-20 21:05:21,036: 	 Keyboard Interrupted
+DEBUG 2016-07-20 22:53:40,442: 	 Executing command: 'submit'
+DEBUG 2016-07-20 22:53:40,458: 	 Found CRAB cache file /afs/cern.ch/user/y/yoshin/.crab3
+DEBUG 2016-07-20 22:53:40,503: 	 Checking credentials
+DEBUG 2016-07-20 22:53:40,505: 	 Found proxy file /tmp/x509up_u42351
+DEBUG 2016-07-20 22:53:40,505: 	 Getting proxy life time left
+DEBUG 2016-07-20 22:53:41,108: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-20 22:53:41,108: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-07-20 22:53:41,108: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+ERROR 2016-07-20 22:53:47,888: 	 Keyboard Interrupted
+DEBUG 2016-07-20 23:01:52,564: 	 Executing command: 'submit'
+DEBUG 2016-07-20 23:01:52,565: 	 Found CRAB cache file /afs/cern.ch/user/y/yoshin/.crab3
+DEBUG 2016-07-20 23:01:52,580: 	 Checking credentials
+DEBUG 2016-07-20 23:01:52,582: 	 Found proxy file /tmp/x509up_u42351
+DEBUG 2016-07-20 23:01:52,582: 	 Getting proxy life time left
+DEBUG 2016-07-20 23:01:53,400: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-20 23:01:53,401: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-07-20 23:01:53,401: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-07-20 23:01:54,006: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 1
+DEBUG 2016-07-20 23:01:54,712: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-20 23:01:55,417: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u42351 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+ERROR 2016-07-20 23:01:55,418: 	 Problems creating proxy.
+ERROR 2016-07-20 23:01:55,418: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 292, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
+DEBUG 2016-07-20 23:09:21,664: 	 Executing command: 'submit'
+DEBUG 2016-07-20 23:09:21,665: 	 Found CRAB cache file /afs/cern.ch/user/y/yoshin/.crab3
+DEBUG 2016-07-20 23:09:21,675: 	 Checking credentials
+DEBUG 2016-07-20 23:09:21,677: 	 Found proxy file /tmp/x509up_u42351
+DEBUG 2016-07-20 23:09:21,677: 	 Getting proxy life time left
+DEBUG 2016-07-20 23:09:22,181: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-20 23:09:22,181: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-07-20 23:09:22,181: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-07-20 23:09:28,199: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2016-07-20 23:09:28,705: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-20 23:09:29,211: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -actimeleft
+ output : 86397
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-20 23:09:29,715: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u42351 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-20 23:09:29,715: 	 Proxy created.
+INFO 2016-07-20 23:09:29,716: 	 Will use CRAB configuration file jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+DEBUG 2016-07-20 23:09:29,716: 	 Loading CRAB configuration file.
+ERROR 2016-07-20 23:09:29,866: 	 Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2016-07-20 23:09:29,866: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 298, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2016-07-21 23:06:18,408: 	 Executing command: 'submit'
+DEBUG 2016-07-21 23:06:18,416: 	 Found CRAB cache file /afs/cern.ch/user/y/yoshin/.crab3
+DEBUG 2016-07-21 23:06:18,450: 	 Checking credentials
+DEBUG 2016-07-21 23:06:18,452: 	 Found proxy file /tmp/x509up_u42351
+DEBUG 2016-07-21 23:06:18,452: 	 Getting proxy life time left
+DEBUG 2016-07-21 23:06:19,457: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 187
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:06:19,960: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -actimeleft
+ output : 187
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:06:19,960: 	 Proxy valid for 00:03:07 hours
+DEBUG 2016-07-21 23:06:19,960: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-07-21 23:12:55,034: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2016-07-21 23:12:55,538: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:12:56,043: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -actimeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:12:56,547: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u42351 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:12:56,547: 	 Proxy created.
+INFO 2016-07-21 23:12:56,547: 	 Will use CRAB configuration file jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+DEBUG 2016-07-21 23:12:56,548: 	 Loading CRAB configuration file.
+ERROR 2016-07-21 23:12:56,552: 	 Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2016-07-21 23:12:56,552: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 298, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2016-07-21 23:13:45,634: 	 Executing command: 'submit'
+DEBUG 2016-07-21 23:13:45,635: 	 Found CRAB cache file /afs/cern.ch/user/y/yoshin/.crab3
+DEBUG 2016-07-21 23:13:45,641: 	 Checking credentials
+DEBUG 2016-07-21 23:13:45,643: 	 Found proxy file /tmp/x509up_u42351
+DEBUG 2016-07-21 23:13:45,643: 	 Getting proxy life time left
+DEBUG 2016-07-21 23:13:46,146: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 86347
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:13:46,650: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -actimeleft
+ output : 86347
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:13:46,650: 	 Proxy valid for 23:59:07 hours
+INFO 2016-07-21 23:13:46,651: 	 Will use CRAB configuration file jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+DEBUG 2016-07-21 23:13:46,651: 	 Loading CRAB configuration file.
+ERROR 2016-07-21 23:13:46,777: 	 Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2016-07-21 23:13:46,777: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 298, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2016-07-21 23:14:11,531: 	 Executing command: 'submit'
+DEBUG 2016-07-21 23:14:11,533: 	 Found CRAB cache file /afs/cern.ch/user/y/yoshin/.crab3
+DEBUG 2016-07-21 23:14:11,543: 	 Checking credentials
+DEBUG 2016-07-21 23:14:11,544: 	 Found proxy file /tmp/x509up_u42351
+DEBUG 2016-07-21 23:14:11,544: 	 Getting proxy life time left
+DEBUG 2016-07-21 23:14:12,048: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 86321
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:14:12,552: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -actimeleft
+ output : 86321
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:14:12,553: 	 Proxy valid for 23:58:41 hours
+INFO 2016-07-21 23:14:12,553: 	 Will use CRAB configuration file jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+DEBUG 2016-07-21 23:14:12,553: 	 Loading CRAB configuration file.
+ERROR 2016-07-21 23:14:12,634: 	 Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2016-07-21 23:14:12,634: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 298, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2016-07-21 23:14:49,800: 	 Executing command: 'submit'
+DEBUG 2016-07-21 23:14:49,801: 	 Found CRAB cache file /afs/cern.ch/user/y/yoshin/.crab3
+DEBUG 2016-07-21 23:14:49,808: 	 Checking credentials
+DEBUG 2016-07-21 23:14:49,808: 	 Found proxy file /tmp/x509up_u42351
+DEBUG 2016-07-21 23:14:49,808: 	 Getting proxy life time left
+DEBUG 2016-07-21 23:14:50,312: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 86283
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:14:50,816: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -actimeleft
+ output : 86283
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:14:50,816: 	 Proxy valid for 23:58:03 hours
+INFO 2016-07-21 23:14:50,816: 	 Will use CRAB configuration file jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+DEBUG 2016-07-21 23:14:50,816: 	 Loading CRAB configuration file.
+ERROR 2016-07-21 23:14:50,818: 	 Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2016-07-21 23:14:50,818: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 298, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2016-07-21 23:15:44,339: 	 Executing command: 'submit'
+DEBUG 2016-07-21 23:15:44,339: 	 Found CRAB cache file /afs/cern.ch/user/y/yoshin/.crab3
+DEBUG 2016-07-21 23:15:44,348: 	 Checking credentials
+DEBUG 2016-07-21 23:15:44,350: 	 Found proxy file /tmp/x509up_u42351
+DEBUG 2016-07-21 23:15:44,350: 	 Getting proxy life time left
+DEBUG 2016-07-21 23:15:44,955: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 86229
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:15:45,462: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -actimeleft
+ output : 86228
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:15:45,463: 	 Proxy valid for 23:57:09 hours
+INFO 2016-07-21 23:15:45,472: 	 Will use CRAB configuration file jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+DEBUG 2016-07-21 23:15:45,472: 	 Loading CRAB configuration file.
+ERROR 2016-07-21 23:15:45,476: 	 Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2016-07-21 23:15:45,476: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 298, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2016-07-21 23:16:21,368: 	 Executing command: 'submit'
+DEBUG 2016-07-21 23:16:21,368: 	 Found CRAB cache file /afs/cern.ch/user/y/yoshin/.crab3
+DEBUG 2016-07-21 23:16:21,378: 	 Checking credentials
+DEBUG 2016-07-21 23:16:21,378: 	 Found proxy file /tmp/x509up_u42351
+DEBUG 2016-07-21 23:16:21,378: 	 Getting proxy life time left
+DEBUG 2016-07-21 23:16:21,994: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -timeleft
+ output : 86192
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:16:22,705: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u42351 -actimeleft
+ output : 86191
+
+ error: 
+ retcode : 0
+DEBUG 2016-07-21 23:16:22,705: 	 Proxy valid for 23:56:32 hours
+INFO 2016-07-21 23:16:22,706: 	 Will use CRAB configuration file jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+DEBUG 2016-07-21 23:16:22,706: 	 Loading CRAB configuration file.
+ERROR 2016-07-21 23:16:22,709: 	 Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2016-07-21 23:16:22,709: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 298, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1607.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/y/yoshin/CMSSW_7_4_1_patch4/src/emjet_generate/jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile

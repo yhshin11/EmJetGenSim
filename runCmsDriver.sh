@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 genfragment=$1
 configfile=$2
 cd $CMSSW_BASE/src
