@@ -2,8 +2,8 @@
 ```bash
 mkdir tmp_emjet_generate
 cd tmp_emjet_generate
-cmsrel CMSSW_7_1_14
-cd CMSSW_7_1_14/src
+cmsrel CMSSW_7_1_18
+cd CMSSW_7_1_18/src
 cmsenv
 
 # Checkout code
