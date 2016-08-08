@@ -89,7 +89,9 @@ for mass_X_d in values['mass_X_d']:
             genfraglinkrelpath = os.path.relpath(genfraglinkpath, os.path.join(cmssw_base, 'src') )
             command_runCmsDriver = './runCmsDriver.sh %s %s' % (genfraglinkrelpath, configpath)
             print command_runCmsDriver
-            p = execute(command_runCmsDriver)
+            # p = execute(command_runCmsDriver)
+            p = subprocess.Popen(command_runCmsDriver, shell=True)
+            p.wait()
 
             ########################################
             # Generate CRAB config file
