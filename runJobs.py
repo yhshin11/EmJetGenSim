@@ -119,10 +119,10 @@ for mass_X_d in values['mass_X_d']:
                 crabconfigfile.write(subline)
             crabconfigfile.close()
 
-# Source CRAB environment
-command_CRAB_environment = "source /cvmfs/cms.cern.ch/crab3/crab.sh"
-execute(command_CRAB_environment)
-execute("which crab")
+# # Source CRAB environment
+# command_CRAB_environment = "source /cvmfs/cms.cern.ch/crab3/crab.sh"
+# execute(command_CRAB_environment)
+# execute("which crab")
 
 for mass_X_d in values['mass_X_d']:
     for tau_pi_d in values['tau_pi_d']:
