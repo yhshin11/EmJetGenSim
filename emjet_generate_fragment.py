@@ -16,10 +16,13 @@ def getjobname(mass_X_d, mass_pi_d, tag_tau_pi_d):
 
 def execute(args):
     """Wrapper function to execute arbitrary shell commands"""
+    print '################################'
     print 'args: ', args
-    p = subprocess.Popen(args, shell=True)
+    p = subprocess.Popen(args, shell=True, executable='/bin/bash')
+    # p = subprocess.call(args, shell=True, executable='/bin/bash')
     p.wait()
     return p
+    print '################################'
 
 
 jobdirname = 'jobs'
@@ -72,15 +75,17 @@ for mass_X_d in values['mass_X_d']:
                 subline = t.substitute(kwdict)
                 # print subline.rstrip('\n')
                 genfragfile.write(subline)
+            genfragfile.close()
             genfraglinkpath = os.path.join(genfraglinkdir, genfragname)
             print 'genfraglinkpath: ', genfraglinkpath
-            execute('ln -sf %s %s' % (genfragpath, genfraglinkpath) ) #MA
+            # execute('ln -sf %s %s' % (genfragpath, genfraglinkpath) ) #MA
+            execute('cp %s %s' % (genfragpath, genfraglinkpath) ) #MA
             # Call `scram b` to compile generator fragment
-            cwd = os.getcwd() #MA
-            print cwd         #MA
-            os.chdir(os.path.join(cmssw_base, 'src')) #MA
-            execute('scram b') #MA
-            os.chdir(cwd)      #MA
+            # cwd = os.getcwd() #MA
+            # print cwd         #MA
+            # os.chdir(os.path.join(cmssw_base, 'src')) #MA
+            # execute('scram b') #MA
+            # os.chdir(cwd)      #MA
 
 
             ########################################
@@ -89,9 +94,9 @@ for mass_X_d in values['mass_X_d']:
             genfraglinkrelpath = os.path.relpath(genfraglinkpath, os.path.join(cmssw_base, 'src') )
             command_runCmsDriver = './runCmsDriver.sh %s %s' % (genfraglinkrelpath, configpath)
             print command_runCmsDriver
-            # p = execute(command_runCmsDriver)
-            p = subprocess.Popen(command_runCmsDriver, shell=True)
-            p.wait()
+            p = execute(command_runCmsDriver)
+            # p = subprocess.Popen(command_runCmsDriver, shell=True)
+            # p.wait()
 
             ########################################
             # Generate CRAB config file
@@ -112,7 +117,12 @@ for mass_X_d in values['mass_X_d']:
                 subline = t.substitute(kwdict_crab)
                 # print subline.rstrip('\n')
                 crabconfigfile.write(subline)
+            crabconfigfile.close()
 
+# Source CRAB environment
+command_CRAB_environment = "source /cvmfs/cms.cern.ch/crab3/crab.sh"
+execute(command_CRAB_environment)
+execute("which crab")
 
 for mass_X_d in values['mass_X_d']:
     for tau_pi_d in values['tau_pi_d']:

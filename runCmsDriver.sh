@@ -1,7 +1,16 @@
-#!/usr/bin/env bash
+#!/bin/bash
 genfragment=$1
 configfile=$2
+source ~/.bashrc
+echo 'CMSSW_BASE:'
+echo $CMSSW_BASE
 cd $CMSSW_BASE/src
+eval `scramv1 runtime -sh`
+# cmsenv
+scram b
+
+# echo "printenv:"
+# printenv
 
 echo "cmsDriver.py ${genfragment} \
 --fileout file:output.root \
@@ -26,3 +35,5 @@ cmsDriver.py ${genfragment} \
 --magField 38T_PostLS1 \
 --python_filename ${configfile} \
 --no_exec -n 43
+
+# #!/usr/bin/env bash
