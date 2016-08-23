@@ -29,7 +29,7 @@ jobdirname = 'jobs'
 crabconfigname = 'crabConfig.py'
 # Specify values for keyword values
 values = {}
-testing = False
+testing = True
 if testing:
     values['mass_X_d']   = [400]
     values['tau_pi_d']   = [0.001]
@@ -133,11 +133,9 @@ for mass_X_d in values['mass_X_d']:
             ########################################
             print os.getcwd()
             crabconfigpath = os.path.join(jobdirname, jobname, crabconfigname)
-            crabcommand =  './crab_wrapper.sh %s %s %s' % ('--skip-estimates', '--dryrun', crabconfigpath)
-            crabcommand2 = './crab_wrapper.sh --skip-estimates --dryrun jobs/mass_X_d_400_mass_pi_d_1_tau_pi_d_0p001/crabConfig.py'
-            print 'crabcommand==crabcommand2', crabcommand==crabcommand2
+            # crabcommand =  './crab_wrapper.sh %s %s %s' % ('--skip-estimates', '--dryrun', crabconfigpath)
+            crabcommand =  './crab_wrapper.sh %s %s %s' % ('', '', crabconfigpath)
             print 'crabcommand: ', crabcommand
-            print 'crabcommand2: ', crabcommand2
             print 'Executing crabcommand'
             p=subprocess.Popen(crabcommand, shell=True)
             p.wait()
