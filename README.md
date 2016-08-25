@@ -30,19 +30,30 @@ cd ..
 </tool>
 ```
 
+# Symlink pythia8 libraries to $CMSSW_BASE/lib/$SCRAM_ARCH/
+
 ```
 scram setup pythia8
 scram b ToolUpdated pythia8
 cmsenv
+```
 
 # Checkout code
+```
 git clone file:///afs/cern.ch/work/y/yoshin/public/emjet_generate EmJetGen
 cd EmJetGen
 
+# Symlink $PYTHIA8DATA to $CMSSW_BASE/src/EmJetGen/PythiaData/data/Pythia8
+mkdir -p $CMSSW_BASE/src/EmJetGen/PythiaData/data
+ln -s $PYTHIA8DATA $CMSSW_BASE/src/EmJetGen/PythiaData/data/Pythia8
+```
+
+```
 source /cvmfs/cms.cern.ch/crab3/crab.sh
 voms-proxy-init
 python runJobs.py
 ```
+
 
 ```bash
 mkdir EmJetMCProd
