@@ -40,6 +40,7 @@ git clone file:///afs/cern.ch/work/y/yoshin/public/emjet_generate EmJetGen
 cd EmJetGen
 
 source /cvmfs/cms.cern.ch/crab3/crab.sh
+voms-proxy-init
 python runJobs.py
 ```
 
