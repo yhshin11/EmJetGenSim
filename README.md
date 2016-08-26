@@ -44,8 +44,8 @@ git clone file:///afs/cern.ch/work/y/yoshin/public/emjet_generate EmJetGen
 cd EmJetGen
 
 # Symlink $PYTHIA8DATA to $CMSSW_BASE/src/EmJetGen/PythiaData/data/Pythia8
-mkdir -p $CMSSW_BASE/src/EmJetGen/PythiaData/data
-ln -s $PYTHIA8DATA $CMSSW_BASE/src/EmJetGen/PythiaData/data/Pythia8
+mkdir -p $CMSSW_BASE/src/EmJetGen/PythiaData/data/Pythia8
+ln -s $PYTHIA8DATA/* $CMSSW_BASE/src/EmJetGen/PythiaData/data/Pythia8/
 ```
 
 ```
