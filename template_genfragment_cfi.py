@@ -33,8 +33,8 @@ generator = cms.EDFilter("Pythia8GeneratorFilter",
 			'4900001:mayDecay = on',
 			'4900001:0:bRatio = 1',
 			'4900001:0:meMode = 102',
-			'HiddenValley:LambdaHV=10.',
-			'HiddenValley:pTminFSR = 11.',
+			'HiddenValley:LambdaHV=${LambdaHV}',
+			'HiddenValley:pTminFSR = ${pTminFSR}',
 			'4900101:m0 = ${mass_q_d}',                   # dark quark mass = LambdaHV
 			'4900111:m0 = ${mass_pi_d}',                  # dark scalar (pion) mass
 			'4900111:tau0 = ${tau_pi_d}',                 # dark scalar (pion) lifetime (in mm)

@@ -51,6 +51,8 @@ for mass_X_d in values['mass_X_d']:
             ########################################
             mass_q_d   = 2 * mass_pi_d
             mass_rho_d = 4 * mass_pi_d
+            LambdaHV   = mass_q_d
+            pTminFSR = LambdaHV * 1.1
             tag_tau_pi_d = tags_tau_pi_d[tau_pi_d]
             genfragname = '%s_cfi.py' % jobname
             configname = '%s_cfg.py' % jobname
@@ -64,6 +66,8 @@ for mass_X_d in values['mass_X_d']:
             kwdict['mass_q_d']   = mass_q_d
             kwdict['mass_pi_d']  = mass_pi_d
             kwdict['tau_pi_d']   = tau_pi_d
+            kwdict['LambdaHV']   = LambdaHV
+            kwdict['pTminFSR']   = pTminFSR
 
             cwd = os.getcwd() #MA
             genfragtemplate = open('template_genfragment_cfi.py', 'r')
