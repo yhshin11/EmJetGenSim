@@ -31,7 +31,7 @@ crabconfigname = 'crabConfig.py'
 values = {}
 testing = True
 if testing:
-    values['mass_X_d']   = [400]
+    values['mass_X_d']   = [600, 800, 1000, 1500, 2000]
     values['tau_pi_d']   = [0.001, 0.1, 1., 5., 150., 300.]
     values['mass_pi_d']  = [1, 2, 5, 10]
 else:
@@ -127,6 +127,7 @@ for mass_X_d in values['mass_X_d']:
 for mass_X_d in values['mass_X_d']:
     for tau_pi_d in values['tau_pi_d']:
         for mass_pi_d in values['mass_pi_d']:
+            tag_tau_pi_d = tags_tau_pi_d[tau_pi_d]
             jobname = getjobname(mass_X_d, mass_pi_d, tag_tau_pi_d)
             ########################################
             # Submit CRAB tasks

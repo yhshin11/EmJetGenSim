@@ -15,6 +15,7 @@ config.JobType.psetName    = '${configpath}'
 # config.JobType.pyCfgParams = ['crab=1']
 config.JobType.scriptExe   = 'cmsRunWrapper.sh'
 # config.JobType.scriptArgs  = ''
+config.JobType.priority   = 1
 
 config.section_("Data")
 config.Data.outputPrimaryDataset = 'EmergingJets_${jobname}_TuneCUETP8M1_13TeV_pythia8Mod'
