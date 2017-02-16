@@ -31,15 +31,15 @@ crabconfigname = 'crabConfig.py'
 values = {}
 testing = True
 if testing:
-    values['mass_X_d']   = [600, 800, 1000, 1500, 2000]
-    values['tau_pi_d']   = [0.001, 0.1, 1., 5., 150., 300.]
+    values['mass_X_d']   = [1000]
+    values['tau_pi_d']   = [0.001, 0.1, 1, 5, 25, 60, 100, 150, 300]
     values['mass_pi_d']  = [1, 2, 5, 10]
 else:
     values['mass_X_d']   = [400, 600, 800, 1000, 1500, 2000]
-    values['tau_pi_d']   = [0.001, 0.1, 1., 5., 150., 300.]
+    values['tau_pi_d']   = [0.001, 0.1, 1, 5, 25, 60, 100, 150, 300]
     values['mass_pi_d']  = [1, 2, 5, 10]
     # String representation for values of tau_pi_
-tags_tau_pi_d = {0.001 : '0p001', 0.1 : '0p1', 1. : '1', 5. : '5', 150. : '150', 300. : '300'}
+tags_tau_pi_d = {0.001 : '0p001', 0.1 : '0p1', 1 : '1', 5 : '5', 25 : '25', 60 : '60', 100 : '100', 150 : '150', 300 : '300'}
 
 for mass_X_d in values['mass_X_d']:
     for tau_pi_d in values['tau_pi_d']:
@@ -109,7 +109,7 @@ for mass_X_d in values['mass_X_d']:
             kwdict_crab['configpath'] = configpath
             kwdict_crab['jobname'] = jobname
             kwdict_crab['eventsperjob'] = 100
-            kwdict_crab['totalevents'] = 1000
+            kwdict_crab['totalevents'] = 3000
             kwdict_crab['lfndirbase'] = '/store/user/yoshin/EmJetMC/GENSIM/'
             kwdict_crab['storagesite'] = 'T3_US_UMD'
 
