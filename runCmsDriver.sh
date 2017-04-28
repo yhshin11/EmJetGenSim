@@ -12,28 +12,56 @@ scram b
 # echo "printenv:"
 # printenv
 
+# echo "cmsDriver.py ${genfragment} \
+# --fileout file:output.root \
+# --step GEN,SIM --mc \
+# --eventcontent RAWSIM \
+# --datatier GEN-SIM \
+# --conditions MCRUN2_71_V1::All \
+# --customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1,Configuration/DataProcessing/Utils.addMonitoring \
+# --beamspot NominalCollision2015 \
+# --magField 38T_PostLS1 \
+# --python_filename ${configfile} \
+# --no_exec -n 43"
+
+
+# cmsDriver.py ${genfragment} \
+# --fileout file:output.root \
+# --step GEN,SIM --mc \
+# --eventcontent RAWSIM \
+# --datatier GEN-SIM \
+# --conditions MCRUN2_71_V1::All \
+# --customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1,Configuration/DataProcessing/Utils.addMonitoring \
+# --beamspot NominalCollision2015 \
+# --magField 38T_PostLS1 \
+# --python_filename ${configfile} \
+# --no_exec -n 43
+
 echo "cmsDriver.py ${genfragment} \
---fileout file:output.root \
---step GEN,SIM --mc \
---eventcontent RAWSIM \
---datatier GEN-SIM \
---conditions MCRUN2_71_V1::All \
---customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1,Configuration/DataProcessing/Utils.addMonitoring \
---beamspot NominalCollision2015 \
---magField 38T_PostLS1 \
+--fileout file:output.root  \
+--mc  \
+--eventcontent RAWSIM  \
+--customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1,Configuration/DataProcessing/Utils.addMonitoring  \
+--datatier GEN-SIM  \
+--conditions MCRUN2_71_V1::All  \
+--beamspot Realistic50ns13TeVCollision  \
+--step GEN,SIM  \
+--magField 38T_PostLS1  \
 --python_filename ${configfile} \
---no_exec -n 43"
+--no_exec -n 411"
 
 cmsDriver.py ${genfragment} \
---fileout file:output.root \
---step GEN,SIM --mc \
---eventcontent RAWSIM \
---datatier GEN-SIM \
---conditions MCRUN2_71_V1::All \
---customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1,Configuration/DataProcessing/Utils.addMonitoring \
---beamspot NominalCollision2015 \
---magField 38T_PostLS1 \
+--fileout file:output.root  \
+--mc  \
+--eventcontent RAWSIM  \
+--customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1,Configuration/DataProcessing/Utils.addMonitoring  \
+--datatier GEN-SIM  \
+--conditions MCRUN2_71_V1::All  \
+--beamspot Realistic50ns13TeVCollision  \
+--step GEN,SIM  \
+--magField 38T_PostLS1  \
 --python_filename ${configfile} \
---no_exec -n 43
+--no_exec -n 411
+
 
 # #!/usr/bin/env bash
