@@ -14,6 +14,10 @@ def getjobname(mass_X_d, mass_pi_d, tag_tau_pi_d):
     jobname = 'mass_X_d_%d_mass_pi_d_%d_tau_pi_d_%s' % (mass_X_d, mass_pi_d, tag_tau_pi_d)
     return jobname
 
+def getjobname_new(mX, m_dpi, tag_tau_dpi):
+    jobname = 'mX-%d-m_dpi-%d-tau_dpi-%s' % (mX, m_dpi, tag_tau_dpi)
+    return jobname
+
 def execute(args):
     """Wrapper function to execute arbitrary shell commands"""
     print '################################'
@@ -32,7 +36,7 @@ values = {}
 testing = True
 if testing:
     values['mass_X_d']   = [1000]
-    values['tau_pi_d']   = [5, ]
+    values['tau_pi_d']   = [0.001, 0.1, 1, 5, 25, 60, 100, 150, 300]
     values['mass_pi_d']  = [2, ]
 else:
     values['mass_X_d']   = [400, 600, 800, 1000, 1500, 2000]
@@ -107,10 +111,11 @@ for mass_X_d in values['mass_X_d']:
             ########################################
             kwdict_crab = {}
             kwdict_crab['configpath'] = configpath
-            kwdict_crab['jobname'] = jobname
+            # kwdict_crab['jobname'] = jobname
+            kwdict_crab['datasetname'] =  'EmergingJets_%s_TuneCUETP8M1_13TeV_pythia8Mod_v0' % jobname
             kwdict_crab['eventsperjob'] = 100
             kwdict_crab['totalevents'] = 3000
-            kwdict_crab['lfndirbase'] = '/store/user/yoshin/EmJetMC/GENSIM-2017-04-27/'
+            kwdict_crab['lfndirbase'] = '/store/user/yoshin/EmJetMC/GENSIM-2017-04-30/'
             kwdict_crab['storagesite'] = 'T3_US_UMD'
 
             crabconfigtemplate = open('template_crabConfig.py', 'r')

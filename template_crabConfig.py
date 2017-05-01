@@ -18,7 +18,7 @@ config.JobType.scriptExe   = 'cmsRunWrapper.sh'
 config.JobType.priority   = 1
 
 config.section_("Data")
-config.Data.outputPrimaryDataset = 'EmergingJets_${jobname}_TuneCUETP8M1_13TeV_pythia8Mod'
+config.Data.outputPrimaryDataset = '${datasetname}'
 config.Data.splitting = 'EventBased'
 config.Data.unitsPerJob = ${eventsperjob}
 config.Data.totalUnits = ${totalevents}
