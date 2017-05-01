@@ -13,7 +13,7 @@ echo "##############################"
 echo "Before setting:"
 echo "PYTHIA8DATA      : $PYTHIA8DATA"
 echo "LD_LIBRARY_PATH  : $LD_LIBRARY_PATH"
-export PYTHIA8DATA=$PWD/src/EmJetGen/PythiaData/data/Pythia8
+export PYTHIA8DATA=$PWD/src/EmJetGenSim/PythiaData/data/Pythia8
 export LD_LIBRARY_PATH=$PWD/lib/$SCRAM_ARCH:$LD_LIBRARY_PATH
 echo "After setting:"
 echo "PYTHIA8DATA      : $PYTHIA8DATA"

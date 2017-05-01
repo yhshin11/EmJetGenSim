@@ -48,7 +48,7 @@ echo "cmsDriver.py ${genfragment} \
 --step GEN,SIM  \
 --magField 38T_PostLS1  \
 --python_filename ${configfile} \
---no_exec -n 411"
+--no_exec -n 100"
 
 cmsDriver.py ${genfragment} \
 --fileout file:output.root  \
@@ -61,7 +61,7 @@ cmsDriver.py ${genfragment} \
 --step GEN,SIM  \
 --magField 38T_PostLS1  \
 --python_filename ${configfile} \
---no_exec -n 411
+--no_exec -n 100
 
 
 # #!/usr/bin/env bash
