@@ -26,7 +26,7 @@ config.Data.publication = True
 config.Data.outLFNDirBase = '${lfndirbase}'
 
 # This string is used to construct the output dataset name
-config.Data.outputDatasetTag = '${jobname}'
+config.Data.outputDatasetTag = '${datasettag}'
 
 config.section_("Site")
 # Where the output files will be transmitted to

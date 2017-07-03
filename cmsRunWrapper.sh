@@ -25,3 +25,7 @@ echo "Executing cmsRun"
 echo "##############################"
 
 cmsRun -j FrameworkJobReport.xml -p PSet.py
+
+echo "Outputting directory structure:"
+echo "find ."
+find .
