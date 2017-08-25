@@ -33,8 +33,8 @@ jobdirname = 'jobs'
 crabconfigname = 'crabConfig.py'
 # Specify values for keyword values
 values = {}
-testing = True
-doCrab = False
+testing = False
+doCrab = True
 if testing:
     values['mass_X_d']   = [1000]
     # values['tau_pi_d']   = [0.001, 0.1, 1, 5, 25, 60, 100, 150, 300]
@@ -116,10 +116,10 @@ for mass_X_d in values['mass_X_d']:
             kwdict_crab['configpath'] = configpath
             # kwdict_crab['jobname'] = jobname
             kwdict_crab['datasetname'] =  'EmergingJets_%s_TuneCUETP8M1_13TeV_pythia8Mod' % jobname
-            kwdict_crab['datasettag'] =  'RunIISummer15GS_private_30Apr2017'
+            kwdict_crab['datasettag'] =  'RunIISummer15GS_private_31Jul2017'
             kwdict_crab['eventsperjob'] = 100
             kwdict_crab['totalevents'] = 3000
-            kwdict_crab['lfndirbase'] = '/store/user/yoshin/EmJetMC/GENSIM-2017-04-30/'
+            kwdict_crab['lfndirbase'] = '/store/user/yoshin/EmJetMC/GENSIM-2017-07-31/'
             kwdict_crab['storagesite'] = 'T3_US_UMD'
 
             crabconfigtemplate = open('template_crabConfig.py', 'r')
