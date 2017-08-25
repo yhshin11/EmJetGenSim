@@ -39,7 +39,7 @@ generator = cms.EDFilter("Pythia8GeneratorFilter",
 			'4900111:m0 = ${mass_pi_d}',                  # dark scalar (pion) mass
 			'4900111:tau0 = ${tau_pi_d}',                 # dark scalar (pion) lifetime (in mm)
 			'4900113:m0 = ${mass_rho_d}',                 # dark vector (rho) mass
-			'4900111:0:all on 1.0 102 1 -1',              # dark pion decay to down quarks
+			'4900111:0:all on 1.0 91 1 -1',               # dark pion decay to down quarks
 			'4900113:0:all on 0.999 102 4900111 4900111', # dark vector to dark pions 99.9%
 			'4900113:addchannel on 0.001 102 1 -1',       # dark vector to down quarks 0.1%
 		),
