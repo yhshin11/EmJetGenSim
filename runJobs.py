@@ -116,10 +116,10 @@ for mass_X_d in values['mass_X_d']:
             kwdict_crab['configpath'] = configpath
             # kwdict_crab['jobname'] = jobname
             kwdict_crab['datasetname'] =  'EmergingJets_%s_TuneCUETP8M1_13TeV_pythia8Mod' % jobname
-            kwdict_crab['datasettag'] =  'RunIISummer15GS_private_31Jul2017'
+            kwdict_crab['datasettag'] =  'RunIISummer15GS_private_06Sep2017'
             kwdict_crab['eventsperjob'] = 100
             kwdict_crab['totalevents'] = 3000
-            kwdict_crab['lfndirbase'] = '/store/user/yoshin/EmJetMC/GENSIM-2017-07-31/'
+            kwdict_crab['lfndirbase'] = '/store/user/yoshin/EmJetMC/GENSIM-2017-09-06/'
             kwdict_crab['storagesite'] = 'T3_US_UMD'
 
             crabconfigtemplate = open('template_crabConfig.py', 'r')
