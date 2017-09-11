@@ -37,16 +37,16 @@ testing = False
 doCrab = True
 if testing:
     values['mass_X_d']   = [1000]
-    # values['tau_pi_d']   = [0.001, 0.1, 1, 5, 25, 60, 100, 150, 300]
+    # values['tau_pi_d']   = [0.001, 0.1, 1, 5, 25, 45, 60, 100, 150, 225, 300]
     # values['mass_pi_d']  = [2, 5, ]
     values['tau_pi_d']   = [60]
     values['mass_pi_d']  = [10]
 else:
     values['mass_X_d']   = [400, 600, 800, 1000, 1500, 2000]
-    values['tau_pi_d']   = [0.001, 0.1, 1, 5, 25, 60, 100, 150, 300]
+    values['tau_pi_d']   = [0.001, 0.1, 1, 5, 25, 45, 60, 100, 150, 225, 300]
     values['mass_pi_d']  = [1, 2, 5, 10]
 # String representation for values of tau_pi_d
-tags_tau_pi_d = {0.001 : '0p001', 0.1 : '0p1', 1 : '1', 5 : '5', 25 : '25', 60 : '60', 100 : '100', 150 : '150', 300 : '300'}
+tags_tau_pi_d = {0.001 : '0p001', 0.1 : '0p1', 1 : '1', 5 : '5', 25 : '25', 45 : '45', 60 : '60', 100 : '100', 150 : '150', 225 : '225', 300 : '300'}
 
 for mass_X_d in values['mass_X_d']:
     for tau_pi_d in values['tau_pi_d']:
