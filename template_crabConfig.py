@@ -4,7 +4,7 @@ import time
 config = Configuration()
 
 config.section_("General")
-config.General.requestName = 'EmJetSignalMC' + time.strftime("-%Y%m%d-%H%M%S")
+config.General.requestName = '${requestname}' + time.strftime("-%Y%m%d-%H%M%S")
 config.General.workArea = 'crabTasks/' + config.General.requestName
 config.General.transferLogs = True
 
