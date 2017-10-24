@@ -43,11 +43,12 @@ if testing:
     values['mass_pi_d']  = [10]
 else:
     values['mass_X_d']   = [400, 600, 800, 1000, 1500, 2000]
-    # values['tau_pi_d']   = [0.001, 0.1, 1, 5, 25, 45, 60, 100, 150, 225, 300]
-    values['tau_pi_d']   = [45, 225]
+    # values['tau_pi_d']   = [0.001, 0.1, 1, 2, 5, 25, 45, 60, 100, 150, 225, 300, 500]
+    # values['tau_pi_d']   = [45, 225]
+    values['tau_pi_d']   = [2, 500]
     values['mass_pi_d']  = [1, 2, 5, 10]
 # String representation for values of tau_pi_d
-tags_tau_pi_d = {0.001 : '0p001', 0.1 : '0p1', 1 : '1', 5 : '5', 25 : '25', 45 : '45', 60 : '60', 100 : '100', 150 : '150', 225 : '225', 300 : '300'}
+tags_tau_pi_d = {0.001 : '0p001', 0.1 : '0p1', 1 : '1', 2 : '2', 5 : '5', 25 : '25', 45 : '45', 60 : '60', 100 : '100', 150 : '150', 225 : '225', 300 : '300', 500 : '500'}
 
 for mass_X_d in values['mass_X_d']:
     for tau_pi_d in values['tau_pi_d']:
@@ -118,10 +119,10 @@ for mass_X_d in values['mass_X_d']:
             # kwdict_crab['jobname'] = jobname
             kwdict_crab['requestname'] =  'EmJetSignalMC'
             kwdict_crab['datasetname'] =  'EmergingJets_%s_TuneCUETP8M1_13TeV_pythia8Mod' % jobname
-            kwdict_crab['datasettag'] =  'RunIISummer15GS_private_06Sep2017b'
+            kwdict_crab['datasettag'] =  'RunIISummer15GS_private_06Sep2017c'
             kwdict_crab['eventsperjob'] = 100
             kwdict_crab['totalevents'] = 3000
-            kwdict_crab['lfndirbase'] = '/store/user/yoshin/EmJetMC/GENSIM-2017-09-06b/'
+            kwdict_crab['lfndirbase'] = '/store/user/yoshin/EmJetMC/GENSIM-2017-09-06c/'
             kwdict_crab['storagesite'] = 'T3_US_UMD'
 
             crabconfigtemplate = open('template_crabConfig.py', 'r')
