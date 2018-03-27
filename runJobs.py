@@ -44,8 +44,9 @@ if testing:
     values['mass_pi_d']  = [10]
 else:
     # values['mass_X_d']   = [400, 600, 800, 1000, 1250, 1500, 2000]
-    values['mass_X_d']   = [1250]
-    values['tau_pi_d']   = [0.001, 0.1, 1, 2, 5, 25, 45, 60, 100, 150, 225, 300, 500]
+    values['mass_X_d']   = [400, 600, 800, 1000, 1250]
+    # values['tau_pi_d']   = [0.001, 0.1, 1, 2, 5, 25, 45, 60, 100, 150, 225, 300, 500, 1000]
+    values['tau_pi_d']   = [1000]
     # values['tau_pi_d']   = [45, 225]
     # values['tau_pi_d']   = [2, 500]
     values['mass_pi_d']  = [1, 2, 5, 10]
@@ -127,10 +128,10 @@ for mass_X_d in values['mass_X_d']:
             # kwdict_crab['jobname'] = jobname
             kwdict_crab['requestname'] =  'EmJetSignalMC'
             kwdict_crab['datasetname'] =  'EmergingJets_%s_TuneCUETP8M1_13TeV_pythia8Mod' % jobname
-            kwdict_crab['datasettag'] =  'RunIISummer15GS_private_06Sep2017d'
+            kwdict_crab['datasettag'] =  'RunIISummer15GS_private_06Sep2017e'
             kwdict_crab['eventsperjob'] = 100
-            kwdict_crab['totalevents'] = 3000
-            kwdict_crab['lfndirbase'] = '/store/user/yoshin/EmJetMC/GENSIM-2017-09-06d/'
+            kwdict_crab['totalevents'] = 30000
+            kwdict_crab['lfndirbase'] = '/store/user/yoshin/EmJetMC/GENSIM-2017-09-06e/'
             kwdict_crab['storagesite'] = 'T3_US_UMD'
 
             crabconfigtemplate = open('template_crabConfig.py', 'r')
